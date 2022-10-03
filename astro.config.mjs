@@ -5,15 +5,12 @@ export default defineConfig({
   integrations: [
     NetlifyCMS({
       config: {
-        // Use Netlify’s “Git Gateway” authentication and target our default branch
         backend: {
           name: 'git-gateway',
           branch: 'main',
         },
-        // Configure where our media assets are stored & served from
         media_folder: 'public/assets/img',
         public_folder: '/assets/img',
-        // Configure the content collections
         collections: [
           {
             name: 'blog',
