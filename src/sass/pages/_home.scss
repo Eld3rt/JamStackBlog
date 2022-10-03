@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+// Intro
+
+.intro__inner {
+	gap: var(--sp-intro);
+	place-items: center;
+}
+.intro__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-b-gap);
+}
+
+.intro__button {
+	justify-content: center;
+	width: 100%;
+	flex-grow: 1;
+
+	@media (min-width: 30em) {
+		width: auto;
+	}
+
+	@include mq(m) {
+		flex-grow: 0;
+	}
+}

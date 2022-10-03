@@ -1,0 +1,73 @@
+@use "sass:math";
+@use 'functions' as *;
+
+$space-scale: (
+	d: (
+		sp: (
+			0: 0,
+			200: 0.8em,
+			300: math.div(20em, 17),
+			400: math.div(24em, 17),
+			500: 2rem,
+			700: 2.5rem,
+			800: math.div(45em, 17),
+			p: math.div(32em, 17),
+			a: math.div(32em, 15),
+			b-pad: math.div(15em, 18) math.div(24em, 18),
+			b-mar: math.div(20em, 18),
+			b-gap: 0.625rem 1.5rem,
+			h3: 1em,
+			weak: 0 math.div(8em, 15),
+			section: 2.5rem,
+			header: 1rem,
+			f-pad: 2rem,
+			f-gap: 1rem,
+			intro: 2.5rem min(ratio(90vw, 1400), 5.625rem),
+			posts: clamp(2.5rem, ratio(40vw, 375), 4rem),
+			post: 1.5rem min(ratio(125vw, 1400), 7.8125rem),
+			article-mt: 2.5rem,
+			article-mb: 3.5rem,
+			fc-mar: math.div(12.5em, 14),
+			fc-pad: 1.5rem,
+		),
+	),
+	s: (
+		sp: (
+			section: 6rem,
+		),
+	),
+	m: (
+		sp: (
+			200: 0.75em,
+			300: math.div(32em, 18),
+			400: math.div(40em, 18),
+			500: 3rem,
+			700: 6rem,
+			800: math.div(80.5em, 18),
+			p: math.div(32em, 18),
+			b-mar: math.div(32em, 18),
+			weak: 0 0.5em,
+			section: 10rem,
+			header: 1.875rem,
+			f-mar: 7.3125rem,
+			f-pad: 1.875rem,
+			figcaption: math.div(12.5em, 15),
+		),
+	),
+);
+
+$margin-tops: (
+	mt: (
+		sp: (
+			margin-top: (0, 200, 300, 400, 500, 700, 800, p, h3, h4, weak, fc-mar, f-mar, article-mt),
+		),
+	),
+);
+
+$margin-bottoms: (
+	mb: (
+		sp: (
+			margin-bottom: (article-mb),
+		),
+	),
+);

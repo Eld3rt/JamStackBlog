@@ -1,0 +1,25 @@
+---
+
+import '../sass/style.scss';
+import BaseHead from '../components/BaseHead.astro';
+import SpriteSVG from '../components/SpriteSVG.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+
+const { title } = Astro.props;
+const { scriptsrc } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} scriptsrc={scriptsrc}></BaseHead>
+	</head>
+	<body>
+		<SpriteSVG></SpriteSVG>
+		<Header></Header>
+		<slot></slot>
+		<Footer></Footer>
+	</body>
+</html>

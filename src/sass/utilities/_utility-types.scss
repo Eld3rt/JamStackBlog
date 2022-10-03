@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+@include varUtilityGenerator($font-size);
+@include adaptUtilityGenerator($text-aligns);
+
+.h1 {
+	font-size: var(--fs-700);
+	color: var(--clr-primary-800);
+	line-height: 1.25;
+	text-transform: none;
+	letter-spacing: -.01em;
+	@include mq(s) {
+		letter-spacing: 0;
+	}
+
+	&-big {
+		font-size: var(--fs-800);
+		letter-spacing: -.03em;
+	}
+}
+
+.weak {
+	color: var(--clr-neutral-400);
+}

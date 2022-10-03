@@ -1,0 +1,18 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const {content} = Astro.props;
+---
+
+<BaseLayout title={content.title}>
+	<main class="main">
+		<section class="article mt-article-mt mb-article-mb">
+			<div class="container">
+				<div class="article__inner">
+					<h1 class="article__title h1-big">{content.title}</h1>
+					<slot></slot>
+				</div>
+			</div>
+		</section>
+	</main>
+</BaseLayout>

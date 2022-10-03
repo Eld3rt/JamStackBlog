@@ -1,0 +1,25 @@
+@use "sass:math";
+@use '../abstracts' as *;
+
+@include adaptUtilityGenerator($displays);
+
+.container {
+	--max-width: 1110px;
+	--container-padding: 1.5rem;
+
+	width: min(var(--max-width), 100% - (var(--container-padding)) * 2);
+	margin-inline: auto;
+}
+
+.inner-container {
+	max-width: math.div(620rem, 18);
+}
+
+.even-columns {
+	display: grid;
+
+	@include mq(s) {
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
+}

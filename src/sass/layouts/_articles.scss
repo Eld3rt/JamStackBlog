@@ -1,0 +1,42 @@
+@use "sass:math";
+@use '../abstracts' as *;
+
+.articles {
+	padding-block: var(--sp-section);
+	background-color: var(--clr-primary-100);
+}
+
+.articles__posts {
+	display: grid;
+	gap: var(--sp-posts);
+}
+
+.articles__post {
+	gap: var(--sp-post);
+	grid-auto-columns: math.div(540fr, 445) 1fr;
+}
+
+.post__caption {
+	gap: var(--sp-weak);
+}
+
+.post__button {
+	margin-top: var(--sp-b-mar);
+}
+
+.post__image {
+	grid-row-start: -1;
+	@include mq(s) {
+		display: flex;
+		place-items: center;
+	}
+}
+
+.post-pic {
+	width: 100%;
+	aspect-ratio: math.div(327, 170);
+	object-fit: cover;
+	@include mq(s) {
+		aspect-ratio: math.div(445, 319);
+	}
+}

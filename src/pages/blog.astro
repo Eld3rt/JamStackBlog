@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+
+const title = "Blog";
+const allPosts = await Astro.glob('./blog/*.md');
+const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+
+---
+
+<BaseLayout title={title}>
+	<main class="main">
+		<section class="articles mt-0">
+			<div class="container">
+				<div class="articles__inner">
+					<div class="articles__headline">
+						<h2 class="articles__title s_dn">Blog</h2>
+						<h2 class="articles__title dn s_db h1">Recent articles</h2>
+						<h3 class="articles__subtitle s_dn mt-h3">Blog Section Headline Goes Here</h3>
+						<p class="articles__subtitle dn s_db mt-400 tac">Here are all the latest articles on my blog.</p>
+					</div>
+					<div class="articles__posts mt-700">
+						{sortedPosts.map(post => (
+							<BlogPost post = {post}></BlogPost>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</BaseLayout>

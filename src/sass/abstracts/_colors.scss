@@ -1,0 +1,56 @@
+$color-palette: (
+	d: (
+		clr-primary: (
+			100: hsl(169, 45%, 98%),
+			700: hsl(169, 98%, 26%),
+			800: hsl(169, 100%, 16%)
+		),
+		clr-neutral: (
+			0: hsl(0, 0%, 100%),
+			200: hsl(0, 0%, 81%),
+			400: hsl(0, 0%, 60%),
+			600: hsl(0, 0%, 40%),
+			800: hsl(0, 0%, 20%),
+			900: hsl(0, 0%, 7%)
+		),
+		clr-footer: (
+			logo: hsl(0, 0%, 0%)
+		),
+	),
+	s: (
+		clr-footer: (
+			logo: hsl(0, 0%, 100%),
+		),
+	),
+);
+
+$colors: (
+	clr-primary: (
+		clr-primary: (
+			color: (100, 700, 800),
+		),
+	),
+	clr-neutral: (
+		clr-neutral: (
+			color: (0, 400, 600, 800, 900),
+		),
+	),
+);
+
+$fills: (
+	fill-primary: (
+		clr-primary: (
+			fill: (100, 700, 800),
+		),
+	),
+	fill-neutral: (
+		clr-neutral: (
+			fill: (0, 400, 600, 800, 900),
+		),
+	),
+	fill-footer: (
+		clr-footer: (
+			fill: (logo),
+		),
+	),
+);

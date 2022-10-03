@@ -1,0 +1,22 @@
+---
+import { format } from 'date-fns';
+
+const { post } = Astro.props;
+
+---
+
+<div class="articles__post even-columns">
+	<div class="post__text inner-container">
+		<a href={post.url} class="post__title-link text-link">
+			<h4 class="post__title">{post.frontmatter.title}</h4>
+		</a>
+		<label class="post__caption mt-200"><span class="weak">by</span>{post.frontmatter.author}<span class="weak">on</span><time>{format(new Date(post.frontmatter.date), 'MMMM d, Y')}</time></label>
+		<p class="post__description mt-300">{post.frontmatter.description}</p>
+		<a href={post.url} class="post__button button button-primary">Continue Reading</a>
+	</div>
+	<div class="post__image">
+		<a href={post.url} class="post__image-link">
+			<img src={post.frontmatter.image} alt={post.frontmatter.imageAlt} class="post-pic">
+		</a>
+	</div>
+</div>
