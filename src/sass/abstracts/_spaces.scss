@@ -16,6 +16,7 @@ $space-scale: (
 			b-pad: math.div(15em, 18) math.div(24em, 18),
 			b-mar: math.div(20em, 18),
 			b-gap: 0.625rem 1.5rem,
+			h1-big: math.div(24em, 40),
 			h3: 1em,
 			weak: 0 math.div(8em, 15),
 			section: 2.5rem,
@@ -44,6 +45,7 @@ $space-scale: (
 			500: 3rem,
 			700: 6rem,
 			800: math.div(80.5em, 18),
+			h1-big: math.div(40em, 48),
 			p: math.div(32em, 18),
 			b-mar: math.div(32em, 18),
 			weak: 0 0.5em,
@@ -67,7 +69,7 @@ $margin-tops: (
 $margin-bottoms: (
 	mb: (
 		sp: (
-			margin-bottom: (article-mb),
+			margin-bottom: (200, 300, 400, h1-big, article-mb),
 		),
 	),
 );

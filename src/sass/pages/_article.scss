@@ -1,11 +1,6 @@
 @use '../abstracts' as *;
 
-.article__inner {
-	max-width: 730px;
-	margin-inline: auto;
-}
-
-.article__image-description {
+figcaption {
 	position: relative;
 	padding-bottom: var(--sp-fc-pad);
 	@include pseudo(after) {
@@ -16,4 +11,9 @@
 		margin-inline: auto;
 		top: auto;
 	}
+}
+
+.article__inner {
+	max-width: 730px;
+	margin-inline: auto;
 }

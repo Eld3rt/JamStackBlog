@@ -1,6 +1,37 @@
 @use "sass:math";
 @use '../abstracts' as *;
 
+// Font-faces
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+			url('../assets/fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+			url('../assets/fonts/roboto-v30-latin-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+			url('../assets/fonts/roboto-v30-latin-700.woff2') format('woff2'),
+			url('../assets/fonts/roboto-v30-latin-700.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+			url('../assets/fonts/playfair-display-v29-latin-700.woff2') format('woff2'),
+			url('../assets/fonts/playfair-display-v29-latin-700.woff') format('woff');
+}
+
+// Base styles
+
 body {
 	font-size: var(--fs-300);
 	font-family: 'Roboto';
@@ -46,9 +77,7 @@ figcaption {
 	text-align: center;
 }
 
-// This is setting the font-sizes
-// based on the ones in the abstract
-// folder, go there to make updates
+// Abstract font-sizes
 
 h1 {
 	font-size: var(--fs-700);

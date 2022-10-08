@@ -10,10 +10,8 @@ tags:
   - Post
   - Featured
 ---
-A﻿yoing ayoing Ayoing Ayoing. Mister Testo.
+Ayoing ayoing Ayoing Ayoing. Mister Testo.
 
-
-
-T﻿esting testo.
+Testing testo.
 
 <figure><img src="/assets/img/css-transition-except-one-code-1024x739.png" alt="Image alt" /><figcaption>Figcaption temp</figcaption></figure>
