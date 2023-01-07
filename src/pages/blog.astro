@@ -5,7 +5,6 @@ import BlogPost from '../components/BlogPost.astro';
 const title = "Blog";
 const allPosts = await Astro.glob('./blog/*.md');
 const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
-
 ---
 
 <BaseLayout title={title}>

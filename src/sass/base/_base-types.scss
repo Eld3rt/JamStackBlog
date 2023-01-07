@@ -33,7 +33,6 @@
 // Base styles
 
 body {
-	font-size: var(--fs-300);
 	font-family: 'Roboto';
 	color: var(--clr-neutral-800);
 }
@@ -78,6 +77,10 @@ figcaption {
 }
 
 // Abstract font-sizes
+
+body {
+	font-size: var(--fs-300);
+}
 
 h1 {
 	font-size: var(--fs-700);
